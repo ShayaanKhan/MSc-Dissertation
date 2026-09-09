@@ -1,0 +1,23 @@
+# Pinned to the versions this notebook was built and verified against.
+# Install with:  pip install -r requirements.txt
+numpy==2.3.5
+pandas==3.0.0
+matplotlib==3.10.7
+seaborn==0.13.2
+scipy==1.17.0
+scikit-learn==1.8.0
+catboost==1.2.10
+xgboost==3.2.0
+jupyter
+ipykernel
+
+# --- Optional, CPU is enough for this dataset (500 points, batch size 32) ---
+# torch is NOT pinned here because the exact build used locally (2.11.0+cu130,
+# a CUDA build) is only resolvable via PyTorch's own index, not plain PyPI.
+# Plain `pip install torch` (CPU build) or `pip install torch==2.11.0` works fine.
+torch
+
+# --- Only required if RUN_EXPENSIVE_CELLS is set to True in the notebook ---
+# (re-running the Google Earth Engine extraction from scratch). Not needed for
+# the default fast path, which loads the CSVs already included in this folder.
+# earthengine-api==1.7.38
